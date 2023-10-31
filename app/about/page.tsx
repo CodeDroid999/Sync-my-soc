@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Messages from './messages'
 
 export default function About() {
   return (
