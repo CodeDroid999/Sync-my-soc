@@ -1,6 +1,7 @@
 import LinkedinLogo from './LinkedinLogo'
 import NextLogo from './NextLogo'
 import SupabaseLogo from './SupabaseLogo'
+import TwitterLogo from './TwitterLogo'
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
         </div>
         <span className="border-l rotate-60 h-6" />
         <div className="w-20 bg-white pl-1">
-          <LinkedinLogo />
+          <TwitterLogo />
         </div>
         <span className="border-l rotate-60 h-6" />
         <div className="w-20 bg-white pl-1">
