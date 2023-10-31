@@ -11,7 +11,7 @@ export default async function AuthButton() {
   } = await supabase.auth.getUser()
 
   return user ? (
-    <div className="flex items-center gap-4 text-blue-900">
+    <div className="items-center gap-4 text-blue-900 text-right">
       <div className="flex space-x-2">
         <AboutButton/>
         <DashboardButton/>
