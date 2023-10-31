@@ -37,14 +37,13 @@ export default async function Index() {
         <main className="flex-1 flex flex-col gap-6">
           <h2 className="font-bold text-4xl mb-4">steps</h2>
           {isSupabaseConnected ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
-        </main>
-      </div>
-      <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
-                <main className="flex-1 flex flex-col gap-6">
+          <div className="flex-1 flex flex-col gap-6">
           <h2 className="font-bold text-4xl mb-4">Steps</h2>
           <StepsGlass/>        
+        </div>
         </main>
       </div>
+      
 
       <footer className="w-full border-t border-t-foreground/10 p-2 flex justify-center text-center text-md bg-white  text-blue-900  space-x-2 align-center">
           <p className="text-lg pt-2">Powered by</p>
