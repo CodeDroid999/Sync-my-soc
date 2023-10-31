@@ -26,7 +26,6 @@ export default async function Index() {
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
           <DeployButton />
           <div className="flex space-x-2">
-            <AboutButton />
             {isSupabaseConnected && <AuthButton />}
           </div>
         </div>
@@ -40,18 +39,9 @@ export default async function Index() {
         </main>
       </div>
 
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{' '}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
+      <footer className="w-full border-t border-t-foreground/10 p-2 flex justify-center text-center text-md bg-white  text-blue-900  space-x-2 align-center">
+          <p className="text-lg pt-2">Powered by</p>
+                <DeployButton />
       </footer>
     </div>
   )
