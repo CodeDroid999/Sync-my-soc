@@ -9,6 +9,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/about" component={About} />
+          <Route path="/dashboard" component={Dashboard}/>
           <Route path="/" component={Index} />
         </Switch>
       </div>
