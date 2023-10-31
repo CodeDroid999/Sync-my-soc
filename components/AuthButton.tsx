@@ -13,16 +13,16 @@ export default async function AuthButton() {
   return user ? (
     <div className="items-center gap-4 text-blue-900 text-right">
       <div className="flex space-x-2">
-        <AboutButton/>
-        <DashboardButton/>
-      <form action="/auth/sign-out" method="post">
-        <button className="text-white py-2 px-4 rounded-md no-underline bg-blue-800  hover:text-blue-900 hover:bg-blue-300">
-          Logout
-        </button>
-      </form>
+        <AboutButton />
+        <DashboardButton />
+        <form action="/auth/sign-out" method="post">
+          <button className="text-white py-2 px-4 rounded-md no-underline bg-blue-800  hover:text-blue-900 hover:bg-blue-300">
+            Logout
+          </button>
+        </form>
       </div>
       Hey, {user.email}!
-      
+
     </div>
   ) : (
     <Link
