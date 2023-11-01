@@ -53,18 +53,16 @@ export default function Page() {
 export default function SignUpUserSteps() {
   return (
     <ol className="flex flex-col gap-6">
-       <p>Head t0 the <a href="/login">Sign up page</a>to register for a free account</p>
+       
       <Step title="Sign up for free!">
         <Step1/>
       </Step>
 
       <Step title="Link your social media Accounts">
-        <p>Add your social media accounts to monitor your online presence influence. </p>
         <Step2/>
       </Step>
 
       <Step title="Monitor your socials all from one place">
-        <p>Monitor your socials all from one place  🚀</p>
         <Step3/>
       </Step>
     </ol>

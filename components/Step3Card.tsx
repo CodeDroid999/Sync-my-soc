@@ -4,17 +4,13 @@ import TwitterLogo from "./TwitterLogo";
 
 export default function Step3() {
     return (
-        <pre className="bg-foreground/5 flex space-x-2 rounded-md p-8 my-8 relative">
-            <div className="w-20 h-6">
-                <SupabaseLogo />
+
+        <pre className="bg-foreground/5 flex flex-col space-x-2 rounded-md p-8 my-8 relative">
+            <div className="w-100 mb-2">
+                <p>Monitor your socials all from one place  🚀</p>
             </div>
-            <span className="border-l rotate-60 h-3" />
-            <div className="w-20 bg-white pl-1">
-                <TwitterLogo />
-            </div>
-            <span className="border-l rotate-60 h-6" />
-            <div className="w-20 bg-white pl-1">
-                <LinkedinLogo />
+            <div className="w-100 flex space-x-3 align-center justify-center">
+               <img src="https://i.postimg.cc/43SM9vgS/GDS-IG-follower-graph-png-2.png" alt="" />
             </div>
         </pre>
     )

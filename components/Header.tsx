@@ -19,11 +19,11 @@ export default function Header() {
           <LinkedinLogo />
         </div>
       </div>
-           <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
+      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
         The fastest way to manage your social accounts ...
       </p>
       <div className="w-full text-white p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
-      
+
     </div>
   )
 }

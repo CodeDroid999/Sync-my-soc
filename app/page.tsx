@@ -35,7 +35,6 @@ export default async function Index() {
       <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
         <Header />
         <main className="flex-1 flex flex-col gap-6">
-        <StepsGlass/>  
           <h2 className="font-bold text-4xl mb-2"><span className="font-bold text-5xl mb-4">S</span>teps</h2>
          <SignUpUserSteps />
           <div className="flex-1 flex flex-col gap-6">
