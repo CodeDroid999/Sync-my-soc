@@ -1,15 +1,39 @@
+import { createClient } from "@/utils/supabase/server";
+import { NextResponse } from "next/server";
 
-async function signInWithFacebook() {
-  const { user, session, error } = await supabase.auth.signIn({
-    provider: 'facebook',
+export const dynamic = "force-dynamic";
+
+export async function POST(request: Request) {
+  const requestUrl = new URL(request.url);
+  const formData = await request.formData();
+  const email = String(formData.get("email"));
+  const password = String(formData.get("password"));
+  const supabase = createClient();
+
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      emailRedirectTo: `${requestUrl.origin}/auth/callback`,
+    },
   });
+ 
 
   if (error) {
-    console.error(error);
-    // Handle the error, e.g., display an error message to the user.
-  } else {
-    // User is successfully signed in with Facebook.
-    console.log('Signed in with Facebook', user);
-    // You can redirect the user or perform any other actions here.
+    return NextResponse.redirect(
+      `${requestUrl.origin}/login?error=Could not authenticate user`,
+      {
+        // a 301 status is required to redirect from a POST to a GET route
+        status: 301,
+      }
+    );
   }
+
+  return NextResponse.redirect(
+    `${requestUrl.origin}/login?message=Check email to continue sign in process`,
+    {
+      // a 301 status is required to redirect from a POST to a GET route
+      status: 301,
+    }
+  );
 }

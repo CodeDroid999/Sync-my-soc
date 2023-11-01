@@ -4,7 +4,7 @@ import Messages from './messages';
 
 export default function Login() {
 
- 
+
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2 bg-orange-50">
       <Link
@@ -27,15 +27,16 @@ export default function Login() {
         </svg>{' '}
         Back
       </Link>
-      <div className="flex w-full space-x-2 align-center justify-center">
-        
-      </div>
+
       <form
         className="flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
         action="/auth/sign-in"
         method="post"
       >
-        
+        <div className="flex w-full space-x-2 align-center justify-center">
+          <SignUpWithFacebookButton />
+        </div>
+
         <label className="text-md text-black" htmlFor="email">
           Email
         </label>
