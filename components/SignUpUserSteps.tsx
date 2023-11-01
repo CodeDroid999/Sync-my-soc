@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Step from './Step'
 import Code from '@/components/Code'
 import Step2 from './Step2Card'
+import Step1 from './Step1Card'
+import Step3 from './Step3Card'
 
 const create = `
 create table notes (
@@ -51,18 +53,9 @@ export default function Page() {
 export default function SignUpUserSteps() {
   return (
     <ol className="flex flex-col gap-6">
+       <p>Head t0 the <a href="/login">Sign up page</a>to register for a free account</p>
       <Step title="Sign up for free!">
-        <p>
-          Head over to the{' '}
-          <Link
-            href="/login"
-            className="font-bold hover:underline text-foreground/80"
-          >
-            Login
-          </Link>{' '}
-          page and sign up your first user. It's okay if this is just you for
-          now. Your awesome idea will have plenty of users later!
-        </p>
+        <Step1/>
       </Step>
 
       <Step title="Link your social media Accounts">
@@ -71,8 +64,8 @@ export default function SignUpUserSteps() {
       </Step>
 
       <Step title="Monitor your socials all from one place">
-        <p>
-         Monitor your socials all from one place  🚀</p>
+        <p>Monitor your socials all from one place  🚀</p>
+        <Step3/>
       </Step>
     </ol>
   )
