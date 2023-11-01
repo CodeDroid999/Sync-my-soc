@@ -21,8 +21,6 @@ export default async function AuthButton() {
           </button>
         </form>
       </div>
-      Hey, {user.email}!
-
     </div>
   ) : (
     <Link
