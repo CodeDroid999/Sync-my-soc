@@ -15,7 +15,7 @@ export default async function HeyUser() {
           <DeployButton />
         </div>
         <div className="hey-user mb-3">
-          Hey, {user.email}!
+          Hey, {user.username || user.email}!
         </div>
       </div>
     );

@@ -36,6 +36,15 @@ export default function Login() {
         <div className="flex w-full space-x-2 align-center justify-center">
           <SignUpWithFacebookButton />
         </div>
+        <label className="text-md text-black " htmlFor="username">
+          Username
+        </label>
+        <input
+          className="rounded-md px-4 py-2 bg-blue-100 borderborder-gray-400 mb-6 text-black"
+          name="username"
+          placeholder="YourUsername"
+          required
+        />
 
         <label className="text-md text-black" htmlFor="email">
           Email
