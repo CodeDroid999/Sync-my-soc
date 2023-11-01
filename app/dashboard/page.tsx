@@ -1,53 +1,32 @@
-import { createClient } from '@/utils/supabase/server'
-import ConnectSupabaseSteps from '@/components/ConnectSupabaseSteps'
-import SignUpUserSteps from '@/components/SignUpUserSteps'
-import Header from '@/components/Header'
-import AboutButton from '@/components/AboutButton'
-import StepsGlass from '@/components/StepsGlass'
-import AuthButton from '@/components/AuthButton'
-import DeployButton from '@/components/DeployButton'
+import SideNav from '@/components/SideNav';
+import React from 'react';
 
-export const dynamic = 'force-dynamic'
-
-const canInitSupabaseClient = () => {
-  try {
-    createClient()
-    return true
-  } catch (e) {
-    return false
-  }
-}
-
-export default async function Index() {
-  const isSupabaseConnected = canInitSupabaseClient()
-
+const Dashboard: React.FC = () => {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center ">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 bg-white">
-        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          <DeployButton />
-          <div className="flex space-x-2">
-            {isSupabaseConnected && <AuthButton />}
-          </div>
-        </div>
-      </nav>
+    <div style={{ margin: 0 }}>
+      <SideNav/>
+      <ul style={{ listStyleType: 'none', margin: 0, padding: 0, width: '25%', backgroundColor: '#f1f1f1', position: 'fixed', height: '100%', overflow: 'auto' }}>
+        <li><a className="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
 
-      <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
-        <Header />
-        <main className="flex-1 flex flex-col gap-6">
-          <h2 className="font-bold text-4xl mb-2"><span className="font-bold text-5xl mb-4">S</span>teps</h2>
-         <SignUpUserSteps />
-          <div className="flex-1 flex flex-col gap-6">
-               
-        </div>
-        </main>
+      <div style={{ marginLeft: '25%', padding: '1px 16px', height: '1000px' }}>
+        <h2>Fixed Full-height Side Nav</h2>
+        <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
       </div>
-      
-
-      <footer className="w-full border-t border-t-foreground/10 p-2 flex justify-center text-center text-md bg-white  text-blue-900  space-x-2 align-center">
-          <p className="text-lg pt-2">Powered by</p>
-                <DeployButton />
-      </footer>
     </div>
-  )
-}
+  );
+};
+
+export default Dashboard;
