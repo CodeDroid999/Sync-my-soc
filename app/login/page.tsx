@@ -1,5 +1,6 @@
 import SignUpWithFacebookButton from '@/components/FacebookSignupButton';
 import Link from 'next/link';
+import Messages from './messages';
 
 export default function Login() {
 
@@ -63,6 +64,7 @@ export default function Login() {
           Sign Up
         </button>
         {/* Messages component for displaying notifications */}
+        <Messages />
       </form>
     </div>
   );
