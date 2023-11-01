@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from 'components/aboutpage'; // Import your About component
+import About from './components/aboutpage'; // Import your About component
 import Index from './components/Index'; // Import your existing component
+import Dashboard from './components/Dashboard'; // Import your Dashboard component
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/dashboard" component={Dashboard}/>
+          <Route path="/dashboard" component={Dashboard} /> {/* Added this route */}
           <Route path="/" component={Index} />
         </Switch>
       </div>
