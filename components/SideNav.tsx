@@ -12,10 +12,42 @@ const SideNav: React.FC = () => {
                 <div className="bg-orange-100 w-100" >
                     <Link
                         href="/"
-                        className="p-2 bg-blue-200 hover:bg-btn-background-hover flex items-center group text-sm"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Home
-                    </Link> </div>
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Home
+                    </Link>
+                    
+                     </div>
             </div>
         </div>
     );
