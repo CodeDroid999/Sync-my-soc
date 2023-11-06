@@ -34,7 +34,6 @@ export default function Login() {
         method="post"
       >
         <div className="flex w-full space-x-2 align-center justify-center">
-          <SignUpWithFacebookButton />
         </div>
         <label className="text-md text-black" htmlFor="email">
           Email
@@ -63,6 +62,13 @@ export default function Login() {
           className="border bg-blue-600 hover:bg-blue-900 border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
         >
           Sign Up
+        </button>
+        <h1 className="text-center text-gray-700">or</h1>
+        <button
+          formAction="/auth/sign-up"
+          className="border bg-blue-600 hover:bg-blue-900 border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
+        >
+          Sign Up with Facebook
         </button>
         {/* Messages component for displaying notifications */}
         <Messages />
