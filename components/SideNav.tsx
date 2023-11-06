@@ -20,8 +20,19 @@ const SideNav: React.FC = () => {
                         href="/"
                         className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
-                        Home
+                        Accounts
                     </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Followers
+                    </Link>
+                    <Link
+                        href="/"
+                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                    >
+                        Privacy policy                    </Link>
                     <Link
                         href="/"
                         className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
@@ -34,20 +45,8 @@ const SideNav: React.FC = () => {
                     >
                         Home
                     </Link>
-                    <Link
-                        href="/"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        href="/"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
-                    >
-                        Home
-                    </Link>
-                    
-                     </div>
+
+                </div>
             </div>
         </div>
     );
