@@ -6,8 +6,8 @@ import React from 'react';
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="bg-blue-700">
-      <DashboardLayout/>
+    <div className="bg-blue-700 w-full flex flex-col">
+      <DashboardLayout />
     </div>
   );
 };
