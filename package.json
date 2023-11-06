@@ -6,9 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@date-io/date-fns": "^2.17.0",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "^2.38.4",
+    "@tremor/react": "^3.10.1",
     "autoprefixer": "10.4.15",
+    "date-fns": "^2.30.0",
     "next": "latest",
     "next-auth": "^4.24.4",
     "node-fetch": "^3.3.2",

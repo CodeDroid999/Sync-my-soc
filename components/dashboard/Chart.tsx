@@ -20,7 +20,7 @@ const data = [
   }
 ];
 
-export default function Chart() {
+export default function Example() {
   return (
     <Card className="mt-8">
       <Title>Performance</Title>
