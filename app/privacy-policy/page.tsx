@@ -1,49 +1,77 @@
-import React from 'react';
+import { createClient } from '@/utils/supabase/server'
+import ConnectSupabaseSteps from '@/components/ConnectSupabaseSteps'
+import SignUpUserSteps from '@/components/SignUpUserSteps'
+import Header from '@/components/Header'
+import AboutButton from '@/components/AboutButton'
+import StepsGlass from '@/components/StepsGlass'
+import AuthButton from '@/components/AuthButton'
+import DeployButton from '@/components/DeployButton'
 
-const PrivacyPolicy: React.FC = () => {
+export const dynamic = 'force-dynamic'
+
+const canInitSupabaseClient = () => {
+  try {
+    createClient()
+    return true
+  } catch (e) {
+    return false
+  }
+}
+
+export default async function PrivacyPolicy() {
+  const isSupabaseConnected = canInitSupabaseClient()
+
   return (
-    <div>
-      <h1>Privacy Policy</h1>
-      <p>Last updated: 12/20/2023</p>
+    <div className="flex-1 w-full flex flex-col gap-20 items-center ">
+      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 bg-white">
+        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
+          <DeployButton />
+          <div className="flex space-x-2">
+            {isSupabaseConnected && <AuthButton />}
+          </div>
+        </div>
+      </nav>
 
-      <p>
-        This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use the service and tells you about your privacy rights and how the law protects you.
-      </p>
+      <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
+        <main className="flex-1 flex flex-col gap-6">
+          <h2 className="font-bold text-4xl mb-2">
+            <span className="font-bold text-5xl mb-4">Privacy Policy</span>
+          </h2>
+          <p className="text-lg">
+            Effective Date: December 20, 2023
+          </p>
+          <p className="text-lg">
+            This Privacy Policy describes how Oletai (referred to as "we", "us", or "our") collects, uses, and discloses your personal information when you use our services. By accessing or using our services, you consent to the practices described in this Privacy Policy.
+          </p>
+          <h3 className="text-2xl font-semibold mt-4">Information We Collect</h3>
+          <p className="text-lg">
+            We collect information that you provide directly when you use our services. This may include your name, email address, and any other information you choose to provide.
+          </p>
+          <h3 className="text-2xl font-semibold mt-4">How We Use Your Information</h3>
+          <p className="text-lg">
+            We use your information for various purposes, including providing and improving our services, contacting you, and responding to your requests.
+          </p>
+          <h3 className="text-2xl font-semibold mt-4">Information Sharing</h3>
+          <p className="text-lg">
+            We do not share your personal information with third parties unless required by law or to protect our rights, privacy, safety, or property.
+          </p>
+          <h3 className="text-2xl font-semibold mt-4">Security</h3>
+          <p className="text-lg">
+            We take reasonable measures to protect your personal information, but no method of transmission over the internet is 100% secure.
+          </p>
+          <h3 className="text-2xl font-semibold mt-4">Changes to Privacy Policy</h3>
+          <p className="text-lg">
+            We may update this Privacy Policy from time to time, and we will notify you of any changes.
+          </p>
+        </main>
 
-      <h2>Interpretation and Definitions</h2>
-      <h3>Interpretation</h3>
-      <p>The words of which the initial letter is capitalized have meanings defined under the following conditions.</p>
-      <p>The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+      </div>
 
-      <h3>Definitions</h3>
-      <p>For the purposes of this Privacy Policy:</p>
-      <ul>
-        <li>
-          <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Oletai.</p>
-        </li>
-        <li>
-          <p><strong>Service</strong> refers to the Syncmysocial Application.</p>
-        </li>
-        <li>
-          <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
-        </li>
-        <li>
-          <p><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Syncmysocial.</p>
-        </li>
-        <li>
-          <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
-        </li>
-        <li>
-          <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device, or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
-        </li>
-        <li>
-          <p><strong>Country</strong> refers to: Kenya</p>
-        </li>
-      </ul>
 
-      {/* Add more sections and content as needed for your privacy policy */}
+      <footer className="w-full border-t border-t-foreground/10 p-2 flex justify-center text-center text-md bg-white  text-blue-900  space-x-2 align-center">
+        <p className="text-lg pt-2">Powered by</p>
+        <DeployButton />
+      </footer>
     </div>
-  );
-};
-
-export default PrivacyPolicy;
+  )
+}
