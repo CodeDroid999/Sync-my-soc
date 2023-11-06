@@ -24,7 +24,7 @@ export default function Chart() {
   return (
     <Card className="mt-8">
       <Title>Performance</Title>
-      <Text>Comparison between Followers and Time</Text>
+      <Text>Comparison between Sales and Profit</Text>
       <AreaChart
         className="mt-4 h-80"
         data={data}

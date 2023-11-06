@@ -17,19 +17,19 @@ const SideNav: React.FC = () => {
                         Home
                     </Link>
                     <Link
-                        href="/"
+                        href="/dashboard"
                         className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Accounts
                     </Link>
                     <Link
-                        href="/"
+                        href="/dashboard/followers"
                         className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Followers
                     </Link>
                     <Link
-                        href="/"
+                        href="/privacy"
                         className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Privacy policy                    </Link>
