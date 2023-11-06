@@ -8,7 +8,6 @@ import { SessionProvider } from "next-auth/react"
 function App() {
   return (
     <Router>
-     <SessionProvider session={pageProps.session}>
       <div>
         <Switch>
           <Route path="/about" component={About} />
@@ -16,7 +15,6 @@ function App() {
           <Route path="/" component={Index} />
         </Switch>
       </div>
-      </SessionProvider>
     </Router>
   );
 }
