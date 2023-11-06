@@ -1,5 +1,6 @@
 import { createClient } from "@/utils/supabase/server";
 import { NextResponse } from "next/server";
+import FacebookProvider from "next-auth/providers/facebook";
 
 export const dynamic = "force-dynamic";
 
