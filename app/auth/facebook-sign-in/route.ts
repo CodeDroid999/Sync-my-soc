@@ -2,15 +2,12 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import NextAuth from 'next-auth';
 import FacebookProvider from 'next-auth/providers/facebook';
 
-const options = {
+export default NextAuth({
   providers: [
     FacebookProvider({
-      clientId: process.env.FACEBOOK_ID,
-      clientSecret: process.env.FACEBOOK_SECRET,
+      clientId: process.env.FACEBOOK_ID || process.env.FACEBOOK_APP_ID,
+      clientSecret: process.env.FACEBOOK_SECRET || process.env.FACEBOOK_APP_SECRET,
     }),
   ],
-};
-
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  return NextAuth(req, res, options);
-};
+  // Other options, callbacks, etc.
+});
