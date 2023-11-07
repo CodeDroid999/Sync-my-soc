@@ -12,36 +12,36 @@ const SideNav: React.FC = () => {
                 <div className="bg-orange-100 w-100" >
                     <Link
                         href="/"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Home
                     </Link>
                     <Link
                         href="/dashboard"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Accounts
                     </Link>
                     <Link
                         href="/dashboard/followers"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Followers
                     </Link>
                     <Link
                         href="/privacy"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Privacy policy                    </Link>
                     <Link
                         href="/"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Home
                     </Link>
                     <Link
                         href="/"
-                        className="p-2 bg-blue-200   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
+                        className="p-2 bg-blue-800   flex items-center group text-sm border-white hover:bg-orange-300 mb-1"
                     >
                         Home
                     </Link>

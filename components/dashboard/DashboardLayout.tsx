@@ -4,6 +4,7 @@ import DeployButton from '../DeployButton';
 import SideNav from '../SideNav';
 import AccountsCard from './AccountsCard';
 import MainCore from './MainCore';
+import Chart from './Chart';
 
 const DashboardLayout: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const DashboardLayout: React.FC = () => {
         <SideNav />
       </div>
       <div className="flex-grow h-full bg-red"> {/* Adjust the width as needed */}
-        <MainCore />
+        <Chart />
       </div>
     </div>
   );
